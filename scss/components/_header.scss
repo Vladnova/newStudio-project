@@ -1,0 +1,216 @@
+.page-header {
+  position: relative;
+}
+
+.nav-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+// логотип
+.logo {
+  @extend %logo;
+  padding: 16px 0;
+  margin: 0;
+
+  .dark {
+    color: $color-title;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 26px 0;
+    margin-right: 88px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 25px 0;
+    margin-right: 93px;
+  }
+}
+
+// Кнопка меню
+.menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+
+  .icon-close-head {
+    display: none;
+  }
+
+  &.is-open {
+    .icon-close-head {
+      display: block;
+    }
+  }
+
+  &.is-open {
+    .icon-menu {
+      display: none;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+// меню
+
+.menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+
+  background-color: $bgc-pages;
+
+  text-align: center;
+  z-index: 99;
+
+  &.is-open {
+    display: block;
+  }
+  @media screen and (min-width: 768px) {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 0;
+  }
+}
+
+// навігація по сторінці
+.list-header {
+  padding: 60px 0;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    padding: 32px 0;
+  }
+}
+
+.item {
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+  @media screen and (min-width: 768px) {
+    &:not(:last-child) {
+      margin-right: 50px;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.item-link {
+  position: relative;
+  color: $color-title;
+
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.02em;
+  line-height: 1.16;
+
+  transition: $animation;
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+  }
+}
+
+.active-link {
+  color: $color-accent;
+
+  &::after {
+    position: absolute;
+    bottom: -12px;
+    left: 0;
+
+    content: "";
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+
+    background-color: $color-accent;
+  }
+
+  @media screen and (min-width: 768px) {
+    &::after {
+      bottom: -33px;
+    }
+  }
+}
+
+//контакти
+
+.address-head {
+  display: block;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: 768px) {
+    padding-bottom: 0;
+    margin-left: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
+
+.contacts {
+  color: $basic-text;
+  display: block;
+
+  font-style: normal;
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: $animation;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+
+  .icon {
+    margin-right: 10px;
+    fill: currentColor;
+  }
+
+  @media screen and (min-width: 768px) {
+    font-size: 12px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    &:not(:last-child) {
+      margin-right: 30px;
+      margin-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+  }
+}

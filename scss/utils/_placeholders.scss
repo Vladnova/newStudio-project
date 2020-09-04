@@ -1,0 +1,61 @@
+%logo {
+  display: inline-block;
+  font-family: $font-logo;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: $color-accent;
+}
+
+%join-in {
+  margin: 0 0 20px 0;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $bgc-pages;
+  letter-spacing: 0.03em;
+}
+
+%social-links {
+  fill: currentColor;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  transition: $animation;
+}
+
+%visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+%pos-rel-2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+%pos-absol {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+%social-links {
+  fill: currentColor;
+
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  transition: $animation;
+}

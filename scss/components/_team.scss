@@ -1,0 +1,77 @@
+.bgc-team {
+  background-color: $bgc-icon-filtr;
+
+  margin-right: auto;
+  margin-left: auto;
+  text-align: center;
+}
+
+.team {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    margin: -15px;
+    flex-wrap: wrap;
+  }
+  .team-card {
+    text-align: center;
+    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 1px 3px rgba(0, 0, 0, 0.12);
+    border-radius: 0px 0px 4px 4px;
+    padding-bottom: 24px;
+
+    background-color: $bgc-pages;
+
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 15px * 4) / 2);
+      margin: 15px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 15px * 8) / 4);
+      margin: 15px;
+    }
+  }
+}
+
+.team-foto {
+  margin-bottom: 30px;
+  max-width: 100%;
+}
+
+.social {
+  padding: 0 32px;
+}
+
+.social-links {
+  @extend %social-links;
+  color: $color-social;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover,
+  &:focus {
+    color: $bgc-pages;
+    background-color: $color-accent;
+    outline: none;
+  }
+}
+
+.name {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+
+  color: $color-title;
+}
+
+.position {
+  margin-top: 0;
+  margin-bottom: 16px;
+
+  font-size: 16px;
+  line-height: 1.19;
+}

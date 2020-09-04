@@ -1,0 +1,46 @@
+.customers {
+  display: flex;
+  margin: -15px;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 767px) {
+  .customers .customer-item {
+    flex-basis: calc((100% - 15px * 4) / 2);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .customers .customer-item {
+    flex-basis: calc((100% - 15px * 6) / 3);
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .customers .customer-item {
+    flex-basis: calc((100% - 15px * 12) / 6);
+    margin: 15px;
+  }
+}
+
+.customer-link {
+  height: 90px;
+
+  color: $color-social;
+  border: 1px solid $color-social;
+  box-sizing: border-box;
+  border-radius: $border-radius;
+
+  fill: currentColor;
+
+  transition: $animation;
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+    border: 1px solid $color-accent;
+    outline: none;
+  }
+}
