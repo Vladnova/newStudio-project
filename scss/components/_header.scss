@@ -15,22 +15,26 @@
 }
 
 // логотип
-.logo {
-  @extend %logo;
+.logo-header {
   padding: 16px 0;
   margin: 0;
-
-  .dark {
-    color: $color-title;
-  }
   @media screen and (min-width: 768px) {
     padding: 26px 0;
     margin-right: 88px;
   }
 
   @media screen and (min-width: 1200px) {
-    padding: 25px 0;
+    padding: 22px 0;
     margin-right: 93px;
+    display: inline-block;
+  }
+}
+
+.logo {
+  @extend %logo;
+  margin: 0;
+  .dark {
+    color: $color-title;
   }
 }
 
