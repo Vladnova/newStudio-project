@@ -243,6 +243,14 @@ img {
   color: #ffffff;
 }
 
+@media screen and (min-width: 1200px) {
+  .het-title {
+    font-size: 44px;
+    line-height: 1.36;
+    max-width: 696px;
+  }
+}
+
 .backdrop {
   position: fixed;
   top: 0;
