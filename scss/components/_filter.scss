@@ -1,7 +1,12 @@
+.visually-hidden {
+  @extend %visually-hidden;
+}
+
 .filter {
   text-align: center;
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 40px;
 
   @media screen and (min-width: 768px) {
     justify-content: center;
